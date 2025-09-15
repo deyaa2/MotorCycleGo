@@ -83,6 +83,12 @@ body{
         gap: 40px;
     }
 }
+.map.container-section{
+    box-shadow: var(--section-shadow);
+}
+.driver.container-section{
+    box-shadow: var(--section-shadow);
+}
 .container, .container-section{
     width: clamp(300px, 85%, 1200px);
     margin: auto;
@@ -275,7 +281,7 @@ input[type="submit"]{
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
         border-radius: 8px;
         display: none;
-        z-index: 5;
+        z-index: 20;
     }
     .profile .profileMenu.show{
         display: block;
@@ -377,12 +383,18 @@ footer p{
 .imageLoader{
     height: 100vh;
     background-image: linear-gradient(to bottom,var(--light-aqua),white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .imageLoader img {
     width: 70px;
     height: 70px;
     animation: loading 1s linear 0s infinite normal forwards;
+    position: absolute;
+    z-index: 10;
 }
 @keyframes loading {
     from{
