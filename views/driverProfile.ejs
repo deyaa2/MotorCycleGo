@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Driver Profile: <%= driver.firstName %></title>
-    <link rel="stylesheet" href="/assets/css/myframWork.css">
-    <link rel="stylesheet" href="/assets/css/all.min.css">
-    <link rel="stylesheet" href="/assets/css/responsive.css">
-</head>
-<body>
-  <!-- Start Header -->
-  <%- include('partials/header') %>
-  <!-- End Header -->
-  <div class="imageLoader flex-center" id="loader">
-      <img src="/assets/images/chain.png" alt="loading image">
-  </div>
-  <h1><%= driver.firstName %> <%= driver.lastName %></h1>
-  <p>Email: <%= driver.email %></p>
-  <p>Rating: <%= driver.rating %></p>
+  <head>
+    <title>Driver Profile: <%= driver.firstName %></title>
+    <link rel="stylesheet" href="/assets/css/myframWork.css" />
+    <link rel="stylesheet" href="/assets/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+  </head>
+  <body>
+    <!-- Start Header -->
+    <%- include('partials/header') %>
+    <!-- End Header -->
+    <div class="imageLoader flex-center" id="loader">
+      <img src="/assets/images/chain.png" alt="loading image" />
+    </div>
+    <div class=" driver container-section flex-column">
+      <h1> Hi <%= driver.firstName %> <%= driver.lastName %></h1>
+      <p>Email: <%= driver.email %></p>
+      <p>Rating: <%= driver.rating %></p>
 
-  <h3>Driving Licence</h3>
-  <img src="/uploads/<%= driver.drivingLicenceImage %>" alt="Licence" width="300">
+      <h3>Driving Licence</h3>
+      <img
+        src="/uploads/<%= driver.drivingLicenceImage %>"
+        alt="Licence"
+        width="300"
+      />
 
-  <h3>Bike Image</h3>
-  <img src="/uploads/<%= driver.bikeImage %>" alt="Bike" width="300">
-  <script src="/assets/javaScript/header.js"></script>
-  <script src="/assets/javaScript/main.js"></script>
-  <script src="/assets/javaScript/loading.js"></script>
-</body>
+      <h3>Bike Image</h3>
+      <img src="/uploads/<%= driver.bikeImage %>" alt="Bike" width="300" />
+    </div>
+    <!-- Start footer -->
+    <footer>
+        <div class="links flex-center">
+            <a href="">Facebook</a>
+            <a href="">Instagram</a>
+            <a href="">youtube</a>
+            <a href="">linkedin</a>
+        </div>
+        <p class="flex-center">&copy; 2025 Motorcycle GO Technologies</p>
+    </footer>
+    <!-- End footer -->
+    <script src="/assets/javaScript/header.js"></script>
+    <script src="/assets/javaScript/main.js"></script>
+    <script src="/assets/javaScript/loading.js"></script>
+  </body>
 </html>
