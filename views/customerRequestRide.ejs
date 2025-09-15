@@ -10,6 +10,8 @@
         height: 400px;
         width: 100%;
         margin-bottom: 10px;
+        position: absolute;
+        z-index: 0;
       }
       .input-group {
         margin-bottom: 10px;
@@ -32,32 +34,46 @@
     <div class="imageLoader flex-center" id="loader">
       <img src="/assets/images/chain.png" alt="loading image" />
     </div>
-    <h1>Select Pickup and Destination</h1>
+    <!-- Main Content -->
+    <div class=" map container-section flex-column">
 
-    <!-- Map -->
-    <div id="map"></div>
-
-    <!-- Manual description fields -->
-    <div class="input-group">
-      <label for="pickupDesc">Pickup Description</label>
-      <input
-        type="text"
-        id="pickupDesc"
-        placeholder="e.g. Near Al-Quds Street, next to the gas station"
-      />
+      <h1>Select Pickup and Destination</h1>
+  
+      <!-- Map -->
+      <div id="map"></div>
+  
+      <!-- Manual description fields -->
+      <div class="input-group">
+        <label for="pickupDesc">Pickup Description</label>
+        <input
+          type="text"
+          id="pickupDesc"
+          placeholder="e.g. Near Al-Quds Street, next to the gas station"
+        />
+      </div>
+  
+      <div class="input-group">
+        <label for="destinationDesc">Destination Description</label>
+        <input
+          type="text"
+          id="destinationDesc"
+          placeholder="e.g. Gaza City Mall, main entrance"
+        />
+      </div>
+  
+      <button id="sendRequest" type="button" class="btn" style="width: fit-content;">Send Ride Request</button>
     </div>
-
-    <div class="input-group">
-      <label for="destinationDesc">Destination Description</label>
-      <input
-        type="text"
-        id="destinationDesc"
-        placeholder="e.g. Gaza City Mall, main entrance"
-      />
-    </div>
-
-    <button id="sendRequest" type="button">Send Ride Request</button>
-
+    <!-- Start footer -->
+    <footer>
+        <div class="links flex-center">
+            <a href="">Facebook</a>
+            <a href="">Instagram</a>
+            <a href="">youtube</a>
+            <a href="">linkedin</a>
+        </div>
+        <p class="flex-center">&copy; 2025 Motorcycle GO Technologies</p>
+    </footer>
+    <!-- End footer -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
       let map = L.map("map").setView([31.42, 34.35], 14); // Default center: Deir el-Balah
@@ -132,7 +148,7 @@
         });
     </script>
     <script src="/assets/javaScript/header.js"></script>
-    <script src="/assets/javaScript/loadgin.js"></script>
+    <script src="/assets/javaScript/loading.js"></script>
     <script src="/assets/javaScript/mobile-enhanced.js"></script>
     <script src="/assets/javaScript/main.js"></script>
   </body>
