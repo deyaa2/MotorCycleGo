@@ -19,7 +19,7 @@ const app = express();
 // --------------------
 try {
   app.use(session({
-    secret: process.env.SESSION_SECRET || 'yourSecretKeyHere', // use env var in production
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     cookie: {
