@@ -81,9 +81,9 @@ router.post('/login/customer', async (req, res) => {
 // Driver login
 router.post('/login/driver', async (req, res) => {
   try {
-    const { email, password, driverId } = req.body;
+    const { email, password} = req.body;
     const driver = await Driver.findOne({ email });
-    if (!driver || driver._id.toString() !== driverId) {
+    if (!driver) {
       return res.status(401).send('Invalid credentials');
     }
 
