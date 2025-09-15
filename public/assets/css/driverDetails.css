@@ -1,0 +1,57 @@
+.driverDetails{
+    padding: 30px;
+    box-shadow: var(--section-shadow);
+}
+.aboutAndBikeImage{
+    margin-top: var(--section-space);
+}
+.aboutAndBikeImage > p{
+    width: 400px;
+    color: var(--small-text-color);
+}
+.imgNameStars{
+    gap: 50px;
+    margin-top: var(--section-space);
+}
+.nameStars > p:first-child{
+    line-height: 0;
+    font-size: 24px;
+}
+img[alt="DriverImage"]{
+    box-shadow: var(--card-shadow);
+}
+.bikeImage{
+    width: 400px;
+    height: 300px;
+    border-radius: 0.5rem;
+    box-shadow: var(--card-shadow);
+}
+.bikeName{
+    font-size: 2rem;
+}
+.separator{
+    width: 2px;
+    height: 350px;
+    background-color: var(--main-color);
+    margin: 0px 30px;
+    margin-top: 50px;
+}
+.comments{
+    width: 80%;
+    margin-top: var(--section-space);
+}
+.comments > p:first-child{
+    font-size: 2rem;
+}
+.imgName .name p{
+    line-height: 0;
+}
+.comment{
+    gap: 50px;
+    margin-bottom: 40px;
+}
+.commentAndRate{
+    box-shadow: var(--card-shadow); 
+    padding: 20px;
+    border-radius: 0.5rem;
+}

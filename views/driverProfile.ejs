@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Driver Profile: <%= driver.firstName %></title>
+    <link rel="stylesheet" href="/assets/css/myframWork.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+</head>
+<body>
+  <!-- Start Header -->
+  <%- include('partials/header') %>
+  <!-- End Header -->
+  <div class="imageLoader flex-center" id="loader">
+      <img src="/assets/images/chain.png" alt="loading image">
+  </div>
+  <h1><%= driver.firstName %> <%= driver.lastName %></h1>
+  <p>Email: <%= driver.email %></p>
+  <p>Rating: <%= driver.rating %></p>
+
+  <h3>Driving Licence</h3>
+  <img src="/uploads/<%= driver.drivingLicenceImage %>" alt="Licence" width="300">
+
+  <h3>Bike Image</h3>
+  <img src="/uploads/<%= driver.bikeImage %>" alt="Bike" width="300">
+  <script src="/assets/javaScript/header.js"></script>
+  <script src="/assets/javaScript/main.js"></script>
+  <script src="/assets/javaScript/loading.js"></script>
+</body>
+</html>

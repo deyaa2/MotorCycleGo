@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorcycle GO</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="/assets/images/motorcycle.png">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/myframWork.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+  </head>
+
+  <body>
+    <!-- Start Header -->
+    <%- include('partials/header') %>
+    <!-- End Header -->
+    <div class="imageLoader flex-center" id="loader">
+        <img src="/assets/images/chain.png" alt="loading image">
+    </div>
+    <!-- Start Pick Location -->
+    <section class="location container-section">
+      <div class="enterLocation">
+        <p>Get ready for your first trip</p>
+        <p>
+          Discover the convenience of Motorcycle Go, Request a ride now, or
+          schedule one for later directly from your browser
+        </p>
+        <form action="" class="flex-column">
+          <input type="text" name="pickLocation" placeholder="Enter location" />
+          <input
+            type="text"
+            name="enterDestination"
+            placeholder="Enter destination"
+          />
+          <input type="submit" value="See prices" />
+        </form>
+      </div>
+      <div class="image">
+        <img src="/assets/images/firstRide.jpg" alt="first ride image" />
+      </div>
+    </section>
+    <!-- End Pick loacation -->
+
+    <!-- Start steps -->
+    <section class="steps flex-column container-section">
+      <p>Book your trip on your phone or computer</p>
+      <div class="step step1 flex-spaceEvenly">
+        <img src="/assets/images/step1.jpg" alt="step1 image" />
+        <div class="text">
+          <p>1. Add your trip details</p>
+          <p>
+            Enter your pickup spot and destination, and check prices for your
+            trip.
+          </p>
+        </div>
+      </div>
+      <div class="step step2 flex-spaceEvenly">
+        <div class="text">
+          <p>2. Pay easily</p>
+          <p>
+            Add your preferred payment method, then choose among the ride
+            options available in your location.
+          </p>
+        </div>
+        <img src="/assets/images/step2.jpg" alt="stetp2 image" />
+      </div>
+      <div class="step step3 flex-spaceEvenly">
+        <img src="/assets/images/step3.avif" alt="step3 image" />
+        <div class="text">
+          <p>3. Meet your driver</p>
+          <p>
+            Motorcycle Go will match you with a driver nearby, and you'll get
+            updates on your phone or computer about when to meet them
+          </p>
+        </div>
+      </div>
+      <% if (user) { %>
+      <a href="/customers/<%= user.id %>/request-ride">Book your first ride</a>
+      <% }else{ %>
+      <a href="/login-customer" class="btn">Book your first ride</a>
+      <% } %>
+    </section>
+    <!-- End Steps -->
+
+    <!-- Start Ways to ride -->
+    <section class="rideWays container-section flex-column">
+      <p>Ways to ride and more</p>
+      <div class="ways flex-row flex-spaceBetween">
+        <div class="rideWay rideWay1">
+          <p>Reserve</p>
+          <p>
+            Reserve your ride in advance so you can relax on the day of you trip
+          </p>
+          <a href="" class="btn">Details</a>
+        </div>
+        <div class="rideWay rideWay2">
+          <p>Ride</p>
+          <p>Go anywhere with Motorcycle GO, Request a ride, hop in , and go</p>
+          <a href="" class="btn">Details</a>
+        </div>
+      </div>
+    </section>
+    <!-- End Ways to ride -->
+
+    <!-- Start footer -->
+    <footer>
+      <div class="links flex-center">
+        <a href="">Facebook</a>
+        <a href="">Instagram</a>
+        <a href="">youtube</a>
+        <a href="">linkedin</a>
+      </div>
+      <p class="flex-center">&copy; 2025 Motorcycle GO Technologies</p>
+    </footer>
+    <!-- End footer -->
+    <script src="/assets/javaScript/header.js"></script>
+    <script src="/assets/javaScript/main.js"></script>
+    <script src="/assets/javaScript/loading.js"></script>
+  </body>
+</html>

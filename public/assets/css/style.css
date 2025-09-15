@@ -1,0 +1,94 @@
+/* Start section one (location section) */
+.location .image img{
+    width: 400px;
+    height: 400px;
+    box-shadow: 10px 16px 12px 0px var(--light-aqua);
+    border-radius: 1rem;
+}
+.location .enterLocation p:first-of-type{
+    font-size: 48px;
+    width: 400px
+}
+.location .enterLocation p:nth-of-type(2){
+    color: #da5656;
+    word-spacing: 8px;
+    width: 400px;
+}
+
+/* End Section One (Location section) */
+
+/* Start Section Two (STEPS)  */
+.steps{
+    box-shadow: 
+    10px -8px 8px 0px var(--light-aqua),
+    -10px 8px 8px 0px aqua;
+    border-radius: 1.5rem;
+}
+.steps > p {
+    width: 90%;
+    font-size: 32px;
+}
+.steps .step{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.steps .step img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: var(--card-shadow);
+    margin-right: 20px;
+}
+.steps .step .text{
+    width: 500px;
+    padding: 20px;
+    box-shadow: var(--card-shadow); 
+    margin-right: 20px;
+    border-radius: 0.5rem;   
+}
+.steps .step .text p:first-of-type{
+    font-size: 22px;
+}
+.steps .step .text p:nth-of-type(2){
+    color: var(--small-text-color);
+    word-spacing: 5px;
+}
+.steps a{
+    text-decoration: none;
+    padding: 15px;
+    background-color: var(--main-color);
+    color: var(--light-aqua);
+    font-size: 20px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+}
+/* End section two (STEPS) */
+
+/* Start section three (ways to ride) */
+.rideWays > p {
+    width: 100%;
+    font-size: 32px;
+}
+.rideWays .rideWay{
+    width: 45%;
+    height: 250px;
+    padding: 20px;
+    border-radius: 0.5rem;
+    box-shadow: var(--card-shadow); 
+}
+.rideWays .rideWay p:first-of-type{
+    font-size: 32px;
+    margin: 0;
+}
+.ways{
+    width: 100%;
+}
+.rideWays .rideWay p:nth-child(2){
+    color: var(--small-text-color);
+    margin-bottom: 30px;
+    width: 220px;
+}
+.rideWay a{
+    margin-left: 320px;
+}
+/* End section three */

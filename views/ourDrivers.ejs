@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drivers</title>
+    <link rel="stylesheet" href="/assets/css/myframWork.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/drivers.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+</head>
+<body>
+    <!-- Start Header -->
+    <%- include('partials/header') %>
+    <!-- End Header -->
+    <div class="imageLoader flex-center" id="loader">
+        <img src="/assets/images/chain.png" alt="loading image">
+    </div>
+    <!-- Start Filtering -->
+    <section class="filters container-section flex-row flex-spaceEvenly">
+        <div class=" filter rating">
+            <label for="rating">Driver rating: </label>
+            <select name="rating" id="rating">
+                <option value="5">
+                    Five stars
+                </option>
+                <option value="4">
+                    Four stars
+                </option>
+                <option value="3">
+                    Three stars
+                </option>
+                <option value="2">
+                    Two Stars
+                </option>
+                <option value="1">
+                    One Stars
+                </option>
+            </select>
+        </div>
+        <div class="filter brand">
+            <label for="brand">Bike brand: </label>
+            <select name="Bike brand" id="brand">
+                <option value="sasuki">
+                    Sasuki
+                </option>
+                <option value="tiger">
+                    Halwa tiger
+                </option>
+                <option value="merciedce">
+                    Merciedce
+                </option>
+                <option value="dayone">
+                    Dayone
+                </option>
+            </select>
+        </div>
+        <i class="fa-solid fa-search"></i>
+    </section>
+    <!-- End Filtering -->
+
+    <!-- Start Drivers -->
+     <div class="drivers container-grid">
+        <% drivers.forEach(driver => { %>
+            <div class="driver flex-column">
+                <div class="imgNameStars flex-row">
+                    <div class="imgName flex-row">
+                        <img src="/assets/images/defultProfileImage" alt="" class="circle-50">
+                        <p><%= driver.firstName %> <%= driver.lastName %></p>
+                    </div>
+                </div>
+                <div class="about-driver flex-row flex-spaceBetween">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ratione dolore omnis accusamus fugiat tenetur 
+                        eos expedita! Pariatur odio, dolor molestiae voluptatum vitae esse ad dolore quod veniam, ipsa delectus?
+                    </p>
+                    <div class="separator"></div>
+                    <img src="/uploads/<%= driver.bikeImage %>" alt="driverBike" class="circle-100">
+                </div>
+                <a href="/drivers/<%= driver._id %>/details" class="btn">Details</a>
+            </div>
+        <% }) %>
+
+     </div>
+
+    <!-- Start footer -->
+    <footer>
+        <div class="links flex-center">
+            <a href="">Facebook</a>
+            <a href="">Instagram</a>
+            <a href="">youtube</a>
+            <a href="">linkedin</a>
+        </div>
+        <p class="flex-center">&copy; 2025 Motorcycle GO Technologies</p>
+    </footer>
+    <!-- End footer -->
+    <script src="/assets/javaScript/header.js"></script>
+    <script src="/assets/javaScript/main.js"></script>
+    <script src="/assets/javaScript/mobile-enhanced.js"></script>
+    <script src="/assets/javaScript/loading.js"></script>
+</body>
+</html>

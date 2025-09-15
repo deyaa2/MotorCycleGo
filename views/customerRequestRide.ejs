@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Request Ride</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="/assets/css/myframWork.css" />
+    <link rel="stylesheet" href="/assets/css/all.min.css" />
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .input-group {
+        margin-bottom: 10px;
+      }
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 4px;
+      }
+      input {
+        width: 100%;
+        padding: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Start Header -->
+    <%- include('partials/header') %>
+    <!-- End Header -->
+    <div class="imageLoader flex-center" id="loader">
+      <img src="/assets/images/chain.png" alt="loading image" />
+    </div>
+    <h1>Select Pickup and Destination</h1>
+
+    <!-- Map -->
+    <div id="map"></div>
+
+    <!-- Manual description fields -->
+    <div class="input-group">
+      <label for="pickupDesc">Pickup Description</label>
+      <input
+        type="text"
+        id="pickupDesc"
+        placeholder="e.g. Near Al-Quds Street, next to the gas station"
+      />
+    </div>
+
+    <div class="input-group">
+      <label for="destinationDesc">Destination Description</label>
+      <input
+        type="text"
+        id="destinationDesc"
+        placeholder="e.g. Gaza City Mall, main entrance"
+      />
+    </div>
+
+    <button id="sendRequest" type="button">Send Ride Request</button>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+      let map = L.map("map").setView([31.42, 34.35], 14); // Default center: Deir el-Balah
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "© OpenStreetMap contributors",
+      }).addTo(map);
+
+      let pickupMarker, destinationMarker;
+      let pickupLocation = null,
+        destinationLocation = null;
+
+      // Map click handler
+      map.on("click", function (e) {
+        const { lat, lng } = e.latlng;
+        if (!pickupLocation) {
+          pickupLocation = { lat, lng };
+          pickupMarker = L.marker([lat, lng])
+            .addTo(map)
+            .bindPopup("Pickup")
+            .openPopup();
+        } else if (!destinationLocation) {
+          destinationLocation = { lat, lng };
+          destinationMarker = L.marker([lat, lng])
+            .addTo(map)
+            .bindPopup("Destination")
+            .openPopup();
+        }
+      });
+
+      // Send request button
+      document
+        .getElementById("sendRequest")
+        .addEventListener("click", async () => {
+          if (!pickupLocation || !destinationLocation) {
+            alert("Please select both pickup and destination on the map.");
+            return;
+          }
+
+          const pickupDesc = document.getElementById("pickupDesc").value.trim();
+          const destinationDesc = document
+            .getElementById("destinationDesc")
+            .value.trim();
+
+          if (!pickupDesc || !destinationDesc) {
+            alert("Please enter both pickup and destination descriptions.");
+            return;
+          }
+
+          console.log("Sending ride request:", {
+            pickupLocation,
+            destinationLocation,
+            pickupDesc,
+            destinationDesc,
+          });
+
+          const res = await fetch("/api/ride-request", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              pickup: pickupLocation,
+              destination: destinationLocation,
+              pickupDesc,
+              destinationDesc,
+            }),
+          });
+
+          if (res.ok) {
+            alert("Ride request sent!");
+          } else {
+            alert("Failed to send ride request.");
+          }
+        });
+    </script>
+    <script src="/assets/javaScript/header.js"></script>
+    <script src="/assets/javaScript/loadgin.js"></script>
+    <script src="/assets/javaScript/mobile-enhanced.js"></script>
+    <script src="/assets/javaScript/main.js"></script>
+  </body>
+</html>

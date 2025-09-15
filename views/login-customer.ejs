@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorcycle GO LOGIN</title>
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/loginPage.css">
+    <link rel="stylesheet" href="/assets/css/myframWork.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/assets/css/mobile-enhancements.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+</head>
+<body>
+    <div class="imageLoader flex-center" id="loader">
+        <img src="/assets/images/chain.png" alt="loading image">
+    </div>
+    <div class="loginForm container-section flex-column">
+        <div class="logo flex-center">
+            <p>Motorcycle</p>
+            <img src="/assets/images/motorcycle (1).png" alt="bike-logo">
+            <p>GO</p>
+        </div>
+<!-- Login Form -->
+<form action="/api/auth/login/customer" method="POST" class="flex-column">
+    <!-- Email or phone input -->
+    <input 
+        type="text" 
+        name="email" 
+        placeholder="Enter your phone or Email" 
+        required
+    >
+
+    <!-- Password input -->
+    <input 
+        type="password" 
+        name="password" 
+        placeholder="Enter your Password" 
+        required
+    >
+
+    <!-- Submit button -->
+    <input 
+        type="submit" 
+        value="Login"
+    >
+</form>
+        <div class="links flex-row">
+            <a href="/login-driver">Driver login</a>
+            <a href="/register-driver">Create driver account</a>
+            <a href="/register-customer">Create customer account</a>
+            <a href="">Forget password?</a>
+        </div>
+    </div>
+
+    <!-- Start footer -->
+    <footer class="footerLogin">
+        <div class="links flex-center">
+            <a href="">Facebook</a>
+            <a href="">Instagram</a>
+            <a href="">youtube</a>
+            <a href="">linkedin</a>
+        </div>
+        <p class="flex-center">&copy; 2025 Motorcycle GO Technologies</p>
+    </footer>
+    <!-- End footer -->
+    <script src="/assets/javaScript/loading.js"></script>
+    <script src="/assets/javaScript/header.js"></script>
+    <script src="/assets/javaScript/main.js"></script>
+</body>
+</html>

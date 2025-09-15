@@ -1,0 +1,37 @@
+
+.filters.container-section{
+    box-shadow: 0px 5px 10px 0px var(--main-color);
+    padding: 20px;
+    margin-top: 100px;
+    border-radius: 0.5rem;
+}
+.filters .filter select{
+    border: 1px solid var(--main-color);
+    border-radius: 2px;
+    padding: 10px;
+    background-color: var(--light-aqua);
+}
+
+.drivers{
+    margin-top: 100px;
+    padding: 50px;
+}
+
+.driver{
+    padding: 30px;
+    box-shadow:
+    -5px -5px 8px 0px var(--main-color),
+    5px 5px 8px 0px aqua;
+    border-radius: 0.2rem;
+
+}
+.driver > .about-driver > p:first-child{
+    width: 250px;
+    padding: 10px;
+    color: var(--small-text-color);
+}
+.separator{
+    width: 2px;
+    height: 200px;
+    background-color: var(--main-color);
+}

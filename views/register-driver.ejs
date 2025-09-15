@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorcycle GO Register</title>
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/loginPage.css">
+    <link rel="stylesheet" href="/assets/css/myframWork.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+</head>
+<body>
+    <div class="imageLoader flex-center" id="loader">
+        <img src="/assets/images/chain.png" alt="loading image">
+    </div>
+    <div class="loginForm container-section flex-column" style="top: 35%;">
+        <div class="logo flex-center">
+            <p>Motorcycle</p>
+            <img src="/assets/images/motorcycle (1).png" alt="bike-logo">
+            <p>GO</p>
+        </div>
+        <!-- Driver Registration Form -->
+        <form action="/api/auth/register/driver" method="POST" enctype="multipart/form-data" class="flex-column">
+            <!-- First Name -->
+            <input 
+                type="text" 
+                name="firstName" 
+                placeholder="Enter your first name" 
+                required
+            >
+
+            <!-- Last Name -->
+            <input 
+                type="text" 
+                name="lastName" 
+                placeholder="Enter your last name" 
+                required
+            >
+
+            <!-- Driving Licence Upload -->
+            <label for="image1">Upload your driving license:</label>
+            <input 
+                type="file" 
+                id="image1" 
+                name="drivingLicenceImage" 
+                accept="image/*" 
+                required
+            >
+
+            <!-- Bike Image Upload -->
+            <label for="image2">Upload your bike image:</label>
+            <input 
+                type="file" 
+                id="image2" 
+                name="bikeImage" 
+                accept="image/*" 
+                required
+            >
+
+            <!-- Email or Phone -->
+            <input 
+                type="text" 
+                name="email" 
+                placeholder="Enter your phone or Email" 
+                required
+            >
+
+            <!-- Password -->
+            <input 
+                type="password" 
+                name="password" 
+                placeholder="Enter your password" 
+                required
+            >
+
+            <!-- Confirm Password -->
+            <input 
+                type="password" 
+                name="confirmPassword" 
+                placeholder="Verify your password" 
+                required
+            >
+
+            <!-- Submit Button -->
+            <input 
+                type="submit" 
+                value="Register"
+            >
+        </form>
+
+        <div class="links flex-row">
+            <a href="/login-driver">Driver login</a>
+            <a href="/register-customer">Create customer account</a>
+            <a href="">Forget password?</a>
+        </div>
+    </div>
+
+    <!-- Start footer -->
+    <footer class="footerLogin">
+        <div class="links flex-center">
+            <a href="">Facebook</a>
+            <a href="">Instagram</a>
+            <a href="">youtube</a>
+            <a href="">linkedin</a>
+        </div>
+        <p class="flex-center">&copy; 2025 Motorcycle GO Technologies</p>
+    </footer>
+    <!-- End footer -->
+    <script src="/assets/javaScript/loading.js"></script>
+    <script src="/assets/javaScript/header.js"></script>
+    <script src="/assets/javaScript/main.js"></script>
+</body>
+</html>
+

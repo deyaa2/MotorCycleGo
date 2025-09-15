@@ -1,0 +1,725 @@
+
+/* Base responsive styles */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =================================================================
+   HEADER RESPONSIVE STYLES
+   ================================================================= */
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+    header .container {
+        max-width: 1200px;
+    }
+    
+    .container-section {
+        max-width: 1100px;
+    }
+}
+
+/* Desktop (992px to 1199px) */
+@media (max-width: 1199px) {
+    header .container {
+        padding: 0 15px;
+    }
+    
+    header ul li a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    .logo p {
+        font-size: 22px;
+    }
+    
+    .logo img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Tablet (768px to 991px) */
+@media (max-width: 991px) {
+    header {
+        padding: 15px 0;
+    }
+    
+    header .container {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    header ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    header ul li a {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+    
+    .logo {
+        flex: 1;
+        min-width: 200px;
+    }
+    
+    .logo p {
+        font-size: 20px;
+    }
+    
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .profile .profileMenu {
+        right: -20px;
+        min-width: 250px;
+    }
+}
+
+/* Mobile Large (576px to 767px) */
+@media (max-width: 767px) {
+    header {
+        padding: 10px 0;
+    }
+    
+    header .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    header ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    header ul li a {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+    
+    .logo p {
+        font-size: 18px;
+    }
+    
+    .logo img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .profile .profileMenu {
+        position: fixed;
+        top: 100px;
+        right: 10px;
+        left: 10px;
+        width: auto;
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+    
+    .profile .profileMenu .profileCard div,
+    .profile .profileMenu .profileCard1 div {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
+/* Mobile Small (up to 575px) */
+@media (max-width: 575px) {
+    header ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+    }
+    
+    header ul li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    header ul li a {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+        background-color: rgba(244, 57, 1, 0.1);
+        margin: 2px 0;
+    }
+    
+    .logo p {
+        font-size: 16px;
+    }
+    
+    .logo img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* =================================================================
+   MAIN CONTENT RESPONSIVE STYLES
+   ================================================================= */
+
+/* Container responsive */
+@media (max-width: 1199px) {
+    .container-section {
+        width: clamp(300px, 90%, 1000px);
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container-section {
+        width: clamp(300px, 95%, 900px);
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 40px;
+    }
+    
+    .container-section.flex-spaceEvenly,
+    .container-section.flex-spaceBetween {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .container-section {
+        width: clamp(300px, 98%, 100%);
+        padding: 0 10px;
+        gap: 20px;
+        margin-top: 30px;
+    }
+}
+
+/* Location section responsive */
+@media (max-width: 991px) {
+    .location {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .location .image img {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .location .enterLocation p:first-of-type {
+        font-size: 36px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .location .enterLocation p:nth-of-type(2) {
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    .location .enterLocation form {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 767px) {
+    .location .image img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .location .enterLocation p:first-of-type {
+        font-size: 28px;
+    }
+    
+    .location .enterLocation form input {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 575px) {
+    .location .image img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .location .enterLocation p:first-of-type {
+        font-size: 24px;
+    }
+}
+
+/* Steps section responsive */
+@media (max-width: 991px) {
+    .steps .step {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .steps .step img {
+        width: 250px;
+        height: 250px;
+        margin-right: 0;
+    }
+    
+    .steps .step .text {
+        width: 100%;
+        max-width: 500px;
+        margin-right: 0;
+    }
+    
+    .steps > p {
+        font-size: 28px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .steps .step img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .steps .step .text p:first-of-type {
+        font-size: 18px;
+    }
+    
+    .steps .step .text p:nth-of-type(2) {
+        font-size: 14px;
+    }
+    
+    .steps > p {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 575px) {
+    .steps .step img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .steps > p {
+        font-size: 20px;
+    }
+}
+
+/* Ride ways section responsive */
+@media (max-width: 991px) {
+    .rideWays {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .rideWays .rideWay {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    .rideWay a {
+        margin-left: 0;
+        margin-top: 15px;
+        display: inline-block;
+    }
+}
+
+@media (max-width: 767px) {
+    .rideWays .rideWay {
+        height: auto;
+        min-height: 200px;
+    }
+    
+    .rideWays .rideWay p:first-of-type {
+        font-size: 24px;
+    }
+    
+    .rideWays .rideWay p:nth-child(2) {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* =================================================================
+   FORMS RESPONSIVE STYLES (LOGIN & REGISTRATION)
+   ================================================================= */
+
+@media (max-width: 991px) {
+    .loginForm {
+        width: 90%;
+        max-width: 500px;
+        padding: 30px;
+    }
+    
+    .loginForm .logo p {
+        font-size: 24px;
+    }
+    
+    .loginForm .logo img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 767px) {
+    .loginForm {
+        width: 95%;
+        padding: 20px;
+        top: 20% !important;
+    }
+    
+    .loginForm .logo p {
+        font-size: 20px;
+    }
+    
+    .loginForm .logo img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .loginForm form input {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .links a {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .loginForm {
+        width: 98%;
+        padding: 15px;
+        top: 15% !important;
+    }
+    
+    .loginForm .logo p {
+        font-size: 18px;
+    }
+    
+    .loginForm .logo img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .loginForm form input {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+/* =================================================================
+   DRIVERS PAGE RESPONSIVE STYLES
+   ================================================================= */
+
+@media (max-width: 991px) {
+    .filters {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .filters button {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .container-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .driverCard {
+        max-width: 100%;
+    }
+    
+    .driverCard img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .driverInfo h3 {
+        font-size: 16px;
+    }
+    
+    .driverInfo p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 575px) {
+    .filters button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    
+    .driverCard {
+        padding: 15px;
+    }
+    
+    .driverCard img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* =================================================================
+   FOOTER RESPONSIVE STYLES
+   ================================================================= */
+
+@media (max-width: 767px) {
+    footer {
+        padding: 20px 0;
+    }
+    
+    footer .links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    footer .links a {
+        font-size: 14px;
+    }
+    
+    footer p {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 575px) {
+    footer .links a {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    
+    footer p {
+        font-size: 10px;
+    }
+}
+
+/* =================================================================
+   PROFILE RESPONSIVE STYLES
+   ================================================================= */
+
+@media (max-width: 767px) {
+    .profileInfo {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .profileInfo img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .profileDetails {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .profileDetails .info {
+        width: 100%;
+    }
+}
+
+/* =================================================================
+   DRIVER DETAILS RESPONSIVE STYLES
+   ================================================================= */
+
+@media (max-width: 991px) {
+    .driverDetailsContainer {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .driverPhoto {
+        text-align: center;
+    }
+    
+    .driverPhoto img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 767px) {
+    .driverPhoto img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .driverInfo h2 {
+        font-size: 20px;
+    }
+    
+    .driverInfo p {
+        font-size: 14px;
+    }
+    
+    .commentAndRate {
+        text-align: center;
+    }
+}
+
+/* =================================================================
+   UTILITY CLASSES FOR RESPONSIVE
+   ================================================================= */
+
+/* Hide elements on specific screen sizes */
+.hidden-mobile {
+    display: block;
+}
+
+.hidden-desktop {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .hidden-mobile {
+        display: none;
+    }
+    
+    .hidden-desktop {
+        display: block;
+    }
+}
+
+/* Text alignment utilities */
+.text-center-mobile {
+    text-align: left;
+}
+
+@media (max-width: 767px) {
+    .text-center-mobile {
+        text-align: center;
+    }
+}
+
+/* Spacing utilities */
+.mb-mobile {
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .mb-mobile {
+        margin-bottom: 20px;
+    }
+}
+
+/* =================================================================
+   IMPROVED TOUCH TARGETS FOR MOBILE
+   ================================================================= */
+
+@media (max-width: 767px) {
+    button,
+    .btn,
+    a,
+    input[type="submit"] {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 12px 16px;
+    }
+    
+    .profile .arrow {
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    .profileMenu .profileCard div,
+    .profileMenu .profileCard1 div {
+        min-height: 44px;
+        padding: 12px;
+    }
+}
+
+/* =================================================================
+   PERFORMANCE OPTIMIZATIONS
+   ================================================================= */
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a1a;
+        --second-color: #ffffff;
+        --small-text-color: #ff6b6b;
+    }
+    
+    body {
+        background-color: var(--bg-color);
+        color: var(--second-color);
+    }
+    
+    .loginForm {
+        background-color: rgba(26, 26, 26, 0.95);
+        color: var(--second-color);
+    }
+    
+    input {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--second-color);
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* =================================================================
+   PRINT STYLES
+   ================================================================= */
+
+@media print {
+    header,
+    footer,
+    .profileMenu,
+    .filters,
+    button,
+    .btn {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    .container-section {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Details</title>
+    <link rel="stylesheet" href="/assets/css/myframWork.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/driverDetails.css">
+</head>
+
+<body>
+    
+    <!-- Start Header -->  
+    <%- include('partials/header') %>
+    <!-- End Header -->
+    <div class="imageLoader flex-center" id="loader">
+        <img src="/assets/images/chain.png" alt="loading image">
+    </div>
+    <div class="driverDetails container-section flex-column">
+        <div class="imgNameStars flex-row">
+            <img src="/assets/images/defultProfileImage" alt="DriverImage" class="circle-200">
+            <div class="nameStars flex-column flex-center">
+                <p><%= driver.firstName %> <%= driver.lastName %></p>
+                <div class="stars flex-row">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+        </div>
+        <div class="aboutAndBikeImage flex-spaceBetween flex-row">
+            <div class="flex-column">
+                <p class="bikeName"><%= driver.firstName %>'s Motorcycle:</p>
+                <img src="/uploads/<%= driver.bikeImage %>" alt="Bike" class="bikeImage">
+            </div>
+            <div class="separator"></div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero cum similique distinctio alias pariatur voluptatum, hic maiores velit neque dignissimos, possimus nihil porro fugiat quisquam labore, saepe maxime repudiandae? Odit.</p>
+        </div>
+
+    </div>
+
+    <!-- Start footer -->
+    <footer>
+        <div class="links flex-center">
+            <a href="">Facebook</a>
+            <a href="">Instagram</a>
+            <a href="">youtube</a>
+            <a href="">linkedin</a>
+        </div>
+        <p class="flex-center">&copy; 2025 Motorcycle GO Technologies</p>
+    </footer>
+    <!-- End footer -->
+    <script src="/assets/javaScript/header.js"></script>
+    <script src="/assets/javaScript/main.js"></script>
+    <script src="/assets/javaScript/loading.js"></script>
+    <script src="/assets/javaScript/mobile-enhanced.js"></script>
+</body>
+
+</html>

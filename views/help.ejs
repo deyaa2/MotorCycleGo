@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How it works</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/help.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/myframWork.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/assets/css/mobile-enhancements.css">
+    <link rel="stylesheet" href="/assets/css/animations.css"> 
+</head>
+
+<body>
+    
+    <!-- Start Header -->
+    <%- include('partials/header') %>
+    <!-- End Header -->
+
+    <div class="imageLoader flex-center" id="loader">
+        <img src="/assets/images/chain.png" alt="loading image">
+    </div>
+    <!-- Start Pick Location -->
+    <section class="location container-section">
+        <div class="enterLocation">
+            <p>How MotorcycleGO  works</p>
+            <p>Understanding how MotorcycleGO connects riders and drivers can enhance your experience, Scroll to learn how the app and website work, or request aride now by entering your pickup and dropoff locations below</p>
+            <form action="" class="flex-column">
+                <input type="text" name="pickLocation" placeholder="Enter location">
+                <input type="text" name="enterDestination" placeholder="Enter destination">
+                <input type="submit" value="See prices">
+            </form>
+        </div>
+        <div class="image">
+            <img src="/assets/images/rider2.avif" alt="first ride image">
+        </div>
+    </section>
+    <!-- End Pick loacation -->
+
+    <!-- Start steps -->
+     <section class="steps flex-column container-section">
+        <p>A quick guide to MotorcycleGO</p>
+        <p>Here's how the MotorcycleGO app connects drivers and riders on demand, step by step.</p>
+        <div class="step step1 flex-spaceEvenly">
+            <img src="/assets/images/step1.jpg" alt="step1 image">
+            <div class="text">
+                <p>1. Getting started</p>
+                <p>The rider enters their destination into the "Where to?" or "Dropoff location" box, reviews each ride option, makes their selection,and confirms the pickup.</p>
+            </div>
+        </div>
+        <div class="step step2 flex-spaceEvenly">
+            <div class="text">
+                <p>2. Matching rider and driver</p>
+                <p>A nearby driver accepts the rider's ride request. The rider is automatically notified as the driver gets close.</p>
+            </div>
+            <img src="/assets/images/step2.jpg" alt="stetp2 image">
+        </div>
+        <div class="step step3 flex-spaceEvenly">
+            <img src="/assets/images/step3.avif" alt="step3 image">
+            <div class="text">
+                <p>3. Picking up</p>
+                <p>The driver and the rider verfiy each other's names and the destination. Then the driver starts the ride.</p>
+            </div>
+        </div>
+        <div class="step step2 flex-spaceEvenly">
+            <div class="text">
+                <p>4. Taking the trip</p>
+                <p>The app gives the driver the option to access turn-by-turn directions.</p>
+            </div>
+            <img src="/assets/images/step2.jpg" alt="stetp2 image">
+        </div>
+        <div class="step step3 flex-spaceEvenly">
+            <img src="/assets/images/step3.avif" alt="step3 image">
+            <div class="text">
+                <p>5. Leaving ratings and reviews</p>
+                <p>At the end of each trip, drivers and riders can rate each other from 1 to 5 stars, tiders also have the option to tip directly in the app or online. And in some countries, riders can choose to give their driver compliments</p>
+            </div>
+        </div>
+        <% if (user) { %>
+            <a href="/customers/<%= user.id %>/request-ride">Book your first ride</a>
+        <% }else{ %>
+            <a href="/login/customer" class="btn">Book your first ride</a>
+        <% } %>
+     </section>
+     <!-- End Steps -->
+
+     <!-- Start Ways to ride -->
+      <section class="rideWays container-section flex-column">
+        <p>Suggestions</p>
+        <div class="ways flex-row flex-spaceBetween">
+            <div class="rideWay rideWay1">
+                <p>Reserve</p>
+                <p>Reserve your ride in advance so you can relax on the day of you trip</p>
+                <a href="" class="btn">Details</a>
+            </div>
+            <div class="rideWay rideWay2">
+                <p>Ride</p>
+                <p>Go anywhere with Motorcycle GO, Request a ride, hop in , and go</p>
+                <a href="" class="btn">Details</a>
+            </div>
+        </div>
+      </section>
+      <!-- End Ways to ride -->
+
+      <!-- Start footer -->
+       <footer>
+            <div class="links flex-center">
+                <a href="">Facebook</a>
+                <a href="">Instagram</a>
+                <a href="">youtube</a>
+                <a href="">linkedin</a>
+            </div>
+            <p class="flex-center">&copy; 2025 Motorcycle GO Technologies</p>
+       </footer>
+       <!-- End footer -->
+        <script src="/assets/javaScript/loading.js"></script>
+        <script src="/assets/javaScript/header.js"></script>
+        <script src="/assets/javaScript/mobile-enhanced.js"></script>
+        <script src="/assets/javaScript/main.js"></script>
+</body>
+
+</html>

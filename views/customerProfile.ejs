@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= customer.firstName %> Profile</title>
+    <link rel="stylesheet" href="/assets/css/PassengerProfile.css">
+    <link rel="stylesheet" href="/assets/css/myframWork.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+</head>
+<body>
+    <!-- Start Header -->
+    <%- include('partials/header') %>
+    <!-- End Header -->
+    <div class="imageLoader flex-center" id="loader">
+        <img src="/assets/images/chain.png" alt="loading image">
+    </div>
+    <div class="profileInfo flex-row">
+        <div class="links flex-column">
+            <a href="/index.html">Home</a>
+            <a href="">Personal info</a>
+            <a href="">Security</a>
+            <a href="">Privacy & data</a>
+        </div>
+        <div class="info flex-column">
+            <p>Personal Info</p>
+            <img src="/assets/images/defultProfileImage" alt="">
+            <div class="pInfo name">
+                <p>Name</p>
+                <p><%= customer.firstName %> <%= customer.lastName %></p>
+            </div>
+            <div class="pInfo phone">
+                <p>Phone number</p>
+                <p>+970595569685</p>
+            </div>
+            <div class="pInfo email">
+                <p>Email</p>
+                <p><%= customer.email %></p>
+            </div>
+            <div class="pInfo language">
+                <p>language</p>
+                <p>Update device language</p>
+            </div>
+        </div>
+    </div>
+    <!-- Start footer -->
+    <footer>
+        <div class="links flex-center">
+            <a href="">Facebook</a>
+            <a href="">Instagram</a>
+            <a href="">youtube</a>
+            <a href="">linkedin</a>
+        </div>
+        <p class="flex-center">&copy; 2025 Motorcycle GO Technologies</p>
+    </footer>
+    <!-- End footer -->
+    <script src="/assets/javaScript/header.js"></script>
+    <script src="/assets/javaScript/mobile-enhanced.js"></script>
+    <script src="/assets/javaScript/main.js"></script>
+    <script src="/assets/javaScript/loading.js"></script>
+</body>
+</html>

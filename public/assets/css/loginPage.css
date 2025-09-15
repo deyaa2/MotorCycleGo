@@ -1,0 +1,21 @@
+body{
+    position: relative;
+    height: 100vh;
+}
+.loginForm.container-section{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: var(--section-shadow);
+    padding: 40px;
+}
+.loginForm.container-section .links a{
+    color: var(--main-color);
+    margin-top: 40px;
+}
+footer.footerLogin{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

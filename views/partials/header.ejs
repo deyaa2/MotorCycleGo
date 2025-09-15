@@ -1,0 +1,104 @@
+<header>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo" id="logo" style="cursor: pointer;">
+            <p>Motorcycle</p>
+            <img src="/assets/images/motorcycle (1).png" alt="bike-logo">
+            <p>GO</p>
+        </div>
+
+        <!-- Main Navigation -->
+        <ul>
+            <% if (user) { %>
+                <% if (user.type === 'customer') { %>
+                    <li><a href="/customers/<%= user.id %>/request-ride" target="_blank">Ride</a></li>
+                    <li><a href="/register-driver" target="_blank">Drive</a></li>
+                <% } else if (user.type === 'driver') { %>
+                    <li><a href="/drivers/<%= user.id %>/profile" target="_blank">Drive</a></li>
+                <% } %>
+            <% } else { %>
+                <li><a href="/login-customer" target="_blank">Ride</a></li>
+                <li><a href="/register-driver" target="_blank">Drive</a></li>
+            <% } %>
+
+            <li><a href="#" target="_blank">M.G Eats</a></li>
+            <li><a href="/drivers" target="_blank">Our Drivers</a></li>
+            <li><a href="#" target="_blank">About</a></li>
+        </ul>
+
+        <!-- Right-side Menu -->
+        <ul>
+            <li>
+                <i class="fa-solid fa-earth-americas"></i>
+                <select name="languages">
+                    <option value="En">EN</option>
+                    <option value="Ar">AR</option>
+                </select>
+            </li>
+            <li><a href="/help" target="_blank">Help</a></li>
+
+            <% if (!user) { %>
+                <li><a href="/login-customer" class="btn" style="color: aqua;">Sign in</a></li>
+                <li><a href="/register-customer" class="btn" style="color: aqua;">Sign up</a></li>
+            <% } else { %>
+                <% if (user.type === 'customer') { %>
+                    <li class="profile">
+                        <div class="arrow">
+                            <p><%= user.name %></p>
+                            <span></span><span></span>
+                        </div>
+                        <div class="profileMenu">
+                            <div class="profileCard">
+                                <div class="profileInfo">
+                                    <p></p>
+                                    <img src="/assets/images/defultProfileImage" alt="defaultImage">
+                                </div>
+                                <div class="options">
+                                    <div class="help"><i class="fa-solid fa-circle-info"></i><p>Help</p></div>
+                                    <div class="wallet"><i class="fa-solid fa-wallet"></i><p>Wallet</p></div>
+                                    <div class="activity"><i class="fa-solid fa-chart-line"></i><p>Activity</p></div>
+                                </div>
+                            </div>
+                            <div class="profileCard1">
+                                <div class="manage"><i class="fa-solid fa-people-roof"></i><p>Manage Profile</p></div>
+                                <div class="ride"><i class="fa-solid fa-motorcycle"></i><p>Ride</p></div>
+                                <div class="DriveAndDeliver"><i class="fa-solid fa-car"></i><p>Drive & Deliver</p></div>
+                                <div class="eats"><i class="fa-solid fa-food"></i><p>M.G Eats</p></div>
+                                <button id="signOutBtn">Sign out</button>
+                            </div>
+                        </div>
+                    </li>
+                <% } else if (user.type === 'driver') { %>
+                    <li class="profile">
+                        <div class="arrow">
+                            <p><%= user.name %></p>
+                            <span></span><span></span>
+                        </div>
+                        <div class="profileMenu">
+                            <div class="profileCard">
+                                <div class="profileInfo">
+                                    <p></p>
+                                    <img src="/assets/images/defultProfileImage" alt="defaultImage">
+                                </div>
+                                <div class="options">
+                                    <div class="help"><i class="fa-solid fa-circle-info"></i><p>Help</p></div>
+                                    <div class="wallet"><i class="fa-solid fa-wallet"></i><p>Wallet</p></div>
+                                    <div class="activity"><i class="fa-solid fa-chart-line"></i><p>Activity</p></div>
+                                </div>
+                            </div>
+                            <div class="profileCard1">
+                                <div class="manage"><i class="fa-solid fa-people-roof"></i><p>Manage Profile</p></div>
+                                <div class="ride"><i class="fa-solid fa-motorcycle"></i><p>Ride</p></div>
+                                <div class="DriveAndDeliver"><i class="fa-solid fa-car"></i><p>Drive & Deliver</p></div>
+                                <div class="eats"><i class="fa-solid fa-food"></i><p>M.G Eats</p></div>
+                                <button id="signOutBtn">Sign out</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/drivers/<%= user.id %>/dashboard" style="text-decoration: none; padding: 15px; background-color: var(--main-color); color: var(--light-aqua); font-size: 20px; border-radius: 16px; width: 100px;">Dashboard</a></li>
+                <% } %>
+            <% } %>
+        </ul>
+    </div>
+</header>
+

@@ -1,0 +1,4 @@
+.steps > p:nth-of-type(2){
+    font-size: 18px;
+    color: var(--small-text-color);
+}
