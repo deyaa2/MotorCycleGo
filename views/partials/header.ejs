@@ -38,8 +38,8 @@
             <li><a href="/help" target="_blank">Help</a></li>
 
             <% if (!user) { %>
-                <li><a href="/login-customer"  style="color: aqua;">Sign in</a></li>
-                <li><a href="/register-customer"  style="color: aqua;">Sign up</a></li>
+                <li><a href="/login-customer"  style="text-decoration: none; padding: 15px; background-color: var(--main-color); color: var(--light-aqua); font-size: 20px; border-radius: 16px; width: 100px;">Sign in</a></li>
+                <li><a href="/register-customer"  style="text-decoration: none; padding: 15px; background-color: var(--main-color); color: var(--light-aqua); font-size: 20px; border-radius: 16px; width: 100px;">Sign up</a></li>
             <% } else { %>
                 <% if (user.type === 'customer') { %>
                     <li class="profile">
