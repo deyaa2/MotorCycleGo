@@ -394,6 +394,9 @@ footer p{
     height: 70px;
     animation: loading 1s linear 0s infinite normal forwards;
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     z-index: 10;
 }
 @keyframes loading {
